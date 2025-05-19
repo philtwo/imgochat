@@ -39,7 +39,7 @@ function SignIn() {
   };
 
   return (
-    <button onClick={signInWithGoogle}>Sign in with Google</button>
+    <button className="sign-in" onClick={signInWithGoogle}><img src="/googleLogo.jpg"/>Sign in with Google</button>
   )
 }
 
@@ -54,7 +54,7 @@ function ChatRoom() {
   const dummy = useRef();
 
   const messageRef = firestore.collection('/messages');
-  const query = messageRef.orderBy('createdAt').limit(25);
+  const query = messageRef.orderBy('createdAt').limit(100);
   
   const [messages] = useCollectionData(query, {idField: 'id'});
 
@@ -88,7 +88,7 @@ function ChatRoom() {
 
       <form onSubmit={sendMessage}>
 
-        <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="Say something..." />
+        <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="Be respectful..." />
         <button type="submit">Send</button>
 
       </form>
@@ -101,9 +101,11 @@ function ChatMessage(props) {
 
   const messageClass = uid === auth.currentUser.uid ? 'sent' : 'received';
 
+  const defaultPhotoURL = '/defaultpfp.webp';
+
   return (
     <div className={`message ${messageClass}`}>
-      <img src={photoURL} alt='Avatar' />
+      <img src={photoURL || defaultPhotoURL} alt="pfp" />
       <p>{text}</p>
     </div>
   )

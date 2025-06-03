@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# ImgoChat 💬
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![ImgoChat Logo](public/imgochat.png)
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+ImgoChat is a chat application inspired by the nostalgic MSN Messenger experience but enhanced with contemporary features. It combines the charm of early 2000s instant messaging with the security and functionality expected in today's applications.
 
-### `npm start`
+## Inspiration
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project was inspired by the Fireship YouTube channel video that showcased classic web applications reimagined with modern technologies. The goal was to capture the essence of MSN Messenger while implementing current best practices in web development.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- **MSN Messenger-inspired UI** with a modern twist
+- **Google Authentication** for secure user login
+- **User Profile Integration** displaying Google profile name and photo
+- **Fallback Profile Pictures** for users without Google profile images
+- **Bad Word Filtering** that automatically replaces offensive language with asterisks
+- **Message Timestamps** and date separators for better conversation tracking
+- **Responsive Design** for seamless use across devices
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+- React.js
+- Firebase (Authentication, Firestore, Hosting)
+- CSS3 for styling
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Node.js (v14 or later)
+- npm or yarn
+- Firebase account
 
-### `npm run eject`
+### Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repository
+   ```bash
+   git clone https://github.com/yourusername/imgochat.git
+   cd imgochat
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Install dependencies
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Set up Firebase configuration
+   - Create a `.env` file in the root directory
+   - Add your Firebase configuration variables:
+     ```
+     REACT_APP_FIREBASE_API_KEY=your_api_key
+     REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
+     REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+     REACT_APP_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+     REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+     REACT_APP_FIREBASE_APP_ID=your_app_id
+     ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Start the development server
+   ```bash
+   npm start
+   # or
+   yarn start
+   ```
 
-## Learn More
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Deployment
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ImgoChat can be easily deployed to Firebase Hosting:
 
-### Code Splitting
+```bash
+npm run build
+firebase deploy
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contributing
 
-### Analyzing the Bundle Size
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-### Advanced Configuration
+## Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Fireship YouTube channel for the inspiration
+- Microsoft for the original MSN Messenger that inspired this project
+- The React and Firebase teams for their amazing tools
 
-### Deployment
+## Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+![snapshot1](public/snapshot1.png)
+![snapshot2](public/snapshot2.png)
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Built by Philtwo
